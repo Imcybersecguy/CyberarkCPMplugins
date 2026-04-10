@@ -1,0 +1,7 @@
+RP/0/RP0/CPU0:US-01#config terminal
+Mon Dec  1 11:18:21.825 UTC
+RP/0/RP0/CPU0:US-(config)#username monkey secret Jiasdhjasdhjasdh
+RP/0/RP0/CPU0:US-(config)#commit
+RP/0/RP0/CPU0:US-(config)#end
+RP/0/RP0/CPU0:US-#
+
