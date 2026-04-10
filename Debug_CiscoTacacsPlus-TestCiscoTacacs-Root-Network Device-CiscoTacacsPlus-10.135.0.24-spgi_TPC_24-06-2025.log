@@ -1,0 +1,870 @@
+24/06/2025 08:47:14.659 | 
+24/06/2025 08:47:14.659 | ================================================================================
+24/06/2025 08:47:14.659 | 6/24/2025 8:47:14 AM
+24/06/2025 08:47:14.659 | ================================================================================
+24/06/2025 08:47:14.659 | 
+24/06/2025 08:47:14.659 | Info -> bh :: b -> TPC Version: 14.4.0.5
+24/06/2025 08:47:14.795 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> START
+24/06/2025 08:47:14.817 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> END
+24/06/2025 08:47:14.817 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> START
+24/06/2025 08:47:14.817 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> END
+24/06/2025 08:47:14.817 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> START
+24/06/2025 08:47:14.817 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> END
+24/06/2025 08:47:14.817 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> START
+24/06/2025 08:47:14.817 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> END
+24/06/2025 08:47:14.842 | Info -> MutexHandler :: AcquireMutex -> Start
+24/06/2025 08:47:14.842 | Info -> MutexHandler :: GetMutex -> Start
+24/06/2025 08:47:14.842 | Info -> MutexHandler :: GetExistingMutex -> Trying to open 'HeavyCodeSection' mutex
+24/06/2025 08:47:14.842 | Info -> MutexHandler :: GetMutex -> Trying to create 'HeavyCodeSection' mutex
+24/06/2025 08:47:14.842 | Info -> MutexHandler :: GetMutex -> mutex 'HeavyCodeSection' creation succeeded
+24/06/2025 08:47:14.842 | Info -> MutexHandler :: GetMutex -> End
+24/06/2025 08:47:14.842 | Info -> MutexHandler :: AcquireMutex -> mutex 'HeavyCodeSection' ownership succeeded
+24/06/2025 08:47:14.842 | Info -> MutexHandler :: AcquireMutex -> End
+24/06/2025 08:47:15.300 | Info -> MutexHandler :: ReleaseMutex -> Start
+24/06/2025 08:47:15.300 | Info -> MutexHandler :: ReleaseMutex -> Release mutex 'HeavyCodeSection'
+24/06/2025 08:47:15.300 | Info -> MutexHandler :: ReleaseMutex -> End
+24/06/2025 08:47:15.459 | Info -> bh :: b -> 	|---------------------------------------|
+24/06/2025 08:47:15.459 | Info -> bh :: b -> 		Plugin Execution START
+24/06/2025 08:47:15.459 | Info -> bh :: b -> 	|---------------------------------------|
+24/06/2025 08:47:15.459 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.459 | Info -> bh :: c -> 	InitAction
+24/06/2025 08:47:15.459 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.459 | Info -> m :: l -> START
+24/06/2025 08:47:15.459 | Info -> m :: l -> Processing TCL Command (script)set bTarget 0; set bVerifyRecPass 0; set bTacacsAuth 0; set bPreviousPasswordHashSet 0;
+24/06/2025 08:47:15.474 | Info -> m :: l -> END
+24/06/2025 08:47:15.474 | Info -> bz :: c -> START
+24/06/2025 08:47:15.474 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:15.474 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckUsernameForBlackList
+24/06/2025 08:47:15.474 | Info -> bz :: c -> END
+24/06/2025 08:47:15.474 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.474 | Info -> bh :: c -> 	CheckUsernameForBlackList
+24/06/2025 08:47:15.474 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.474 | Info -> m :: l -> START
+24/06/2025 08:47:15.474 | Info -> m :: l -> Processing TCL Command (script) set bContainsBlacklistCharsOrWords [expr {![string is alnum "<username>"]||[string match -nocase "password" "<username>"]}];
+24/06/2025 08:47:15.474 | Info -> m :: l -> END
+24/06/2025 08:47:15.474 | Info -> bz :: c -> START
+24/06/2025 08:47:15.474 | Info -> bz :: b -> Analyzing next state candidate ContainsForbiddenCharsOrWords: '(expression)$bContainsBlacklistCharsOrWords'
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Analyzing next state candidate NotContainsForbiddenCharsOrWords: '(expression)(!$bContainsBlacklistCharsOrWords)'
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Expression 'NotContainsForbiddenCharsOrWords' is TRUE, continuing to next state CheckTacacsAuthParameter
+24/06/2025 08:47:15.489 | Info -> bz :: c -> END
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bh :: c -> 	CheckTacacsAuthParameter
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bz :: c -> START
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Analyzing next state candidate DoesTacacsAuthParameterEnabled: '(expression)[string equal -nocase "<TacacsAuth>" "yes"]'
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Expression 'DoesTacacsAuthParameterEnabled' is TRUE, continuing to next state SetTacacsAuthOn
+24/06/2025 08:47:15.489 | Info -> bz :: c -> END
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bh :: c -> 	SetTacacsAuthOn
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> m :: l -> START
+24/06/2025 08:47:15.489 | Info -> m :: l -> Processing TCL Command (script)set bTacacsAuth 1;
+24/06/2025 08:47:15.489 | Info -> m :: l -> END
+24/06/2025 08:47:15.489 | Info -> bz :: c -> START
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckAction
+24/06/2025 08:47:15.489 | Info -> bz :: c -> END
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bh :: c -> 	CheckAction
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bz :: c -> START
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Analyzing next state candidate ActionIsVerify: '(expression)[string equal -nocase "<action>" "verifypass"]'
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Analyzing next state candidate ActionIsReconcileOrPreReconcile: '(expression)[string equal -nocase "<action>" "reconcilepass"]||[string equal -nocase "<action>" "prereconcilepass"]'
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Expression 'ActionIsReconcileOrPreReconcile' is TRUE, continuing to next state Reconcile
+24/06/2025 08:47:15.489 | Info -> bz :: c -> END
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bh :: c -> 	Reconcile
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bz :: c -> START
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state SetRecPass
+24/06/2025 08:47:15.489 | Info -> bz :: c -> END
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bh :: c -> 	SetRecPass
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bz :: c -> START
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Analyzing next state candidate RecExt3Exist: '(expression)![string equal -nocase "<pmextrapass3>" ""]'
+24/06/2025 08:47:15.489 | Info -> bz :: b -> Expression 'RecExt3Exist' is TRUE, continuing to next state SetRecPassExt3
+24/06/2025 08:47:15.489 | Info -> bz :: c -> END
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> bh :: c -> 	SetRecPassExt3
+24/06/2025 08:47:15.489 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.489 | Info -> m :: l -> START
+24/06/2025 08:47:15.505 | Info -> m :: l -> Processing TCL Command (script)set bTarget 0;set enable_pass "<pmextrapass1>";set login_pass "<pmextrapass3>"; set login_user "<extrapass3\username>"; set login_address "<extrapass3\address>"; set login_port "<extrapass3\port>";
+24/06/2025 08:47:15.505 | Info -> m :: l -> END
+24/06/2025 08:47:15.505 | Info -> bz :: c -> START
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckRecByEnableExt3
+24/06/2025 08:47:15.505 | Info -> bz :: c -> END
+24/06/2025 08:47:15.505 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.505 | Info -> bh :: c -> 	CheckRecByEnableExt3
+24/06/2025 08:47:15.505 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.505 | Info -> bz :: c -> START
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Analyzing next state candidate IsEnableExt3: '(expression)[string equal -nocase "<extrapass3\Type>" "ciscoenable"]'
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckTacacsAuthReconcile
+24/06/2025 08:47:15.505 | Info -> bz :: c -> END
+24/06/2025 08:47:15.505 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.505 | Info -> bh :: c -> 	CheckTacacsAuthReconcile
+24/06/2025 08:47:15.505 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.505 | Info -> bz :: c -> START
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Analyzing next state candidate DoesTacacsAuthEnabled: '(expression)$bTacacsAuth == 1'
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Expression 'DoesTacacsAuthEnabled' is TRUE, continuing to next state GPHGetUserPrompt
+24/06/2025 08:47:15.505 | Info -> bz :: c -> END
+24/06/2025 08:47:15.505 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.505 | Info -> bh :: c -> 	GPHGetUserPrompt
+24/06/2025 08:47:15.505 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.505 | Info -> bz :: c -> START
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHCheckProtocol
+24/06/2025 08:47:15.505 | Info -> bz :: c -> END
+24/06/2025 08:47:15.505 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.505 | Info -> bh :: c -> 	GPHCheckProtocol
+24/06/2025 08:47:15.505 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.505 | Info -> bz :: c -> START
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Analyzing next state candidate ProtocolIsSSH: '(expression)[string equal -nocase "<Protocol>" "ssh"]'
+24/06/2025 08:47:15.505 | Info -> bz :: b -> Expression 'ProtocolIsSSH' is TRUE, continuing to next state GPHStartSessionSSH
+24/06/2025 08:47:15.505 | Info -> bz :: c -> END
+24/06/2025 08:47:15.521 | Info -> cw :: a -> Host name updated from spawn command: 10.135.5.1
+24/06/2025 08:47:15.521 | Info -> cw :: a -> Port updated from spawn command: 22
+24/06/2025 08:47:15.521 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:15.521 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:15.521 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:15.521 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:15.521 | Info -> c :: a -> State machine type was changed from: c to: bi
+24/06/2025 08:47:15.521 | Info -> cw :: a -> Host name updated from spawn command: 10.135.5.1
+24/06/2025 08:47:15.521 | Info -> cw :: a -> Port updated from spawn command: 22
+24/06/2025 08:47:15.521 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:15.521 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:15.521 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:15.521 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:15.521 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.521 | Info -> bh :: c -> 	GPHStartSessionSSH
+24/06/2025 08:47:15.521 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.521 | Info -> cw :: a -> Host name updated from spawn command: 10.135.5.1
+24/06/2025 08:47:15.521 | Info -> cw :: a -> Port updated from spawn command: 22
+24/06/2025 08:47:15.521 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.521 | Info -> bh :: c -> 	GPHStoreKeyInCache
+24/06/2025 08:47:15.521 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.521 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.521 | Info -> bh :: c -> 	GPHLoginUser
+24/06/2025 08:47:15.521 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.521 | Info -> e :: a -> START
+24/06/2025 08:47:15.521 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.521 | Info -> bh :: c -> 	GPHLoginPass
+24/06/2025 08:47:15.521 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:15.536 | Info -> z :: b -> Trying to connect to 10.135.5.1 using venkata
+24/06/2025 08:47:15.536 | Info -> MutexHandler :: AcquireMutex -> Start
+24/06/2025 08:47:15.536 | Info -> MutexHandler :: GetMutex -> Start
+24/06/2025 08:47:15.536 | Info -> MutexHandler :: GetExistingMutex -> Trying to open 'HeavyCodeSection' mutex
+24/06/2025 08:47:15.536 | Info -> MutexHandler :: GetMutex -> Trying to create 'HeavyCodeSection' mutex
+24/06/2025 08:47:15.536 | Info -> MutexHandler :: GetMutex -> mutex 'HeavyCodeSection' creation succeeded
+24/06/2025 08:47:15.536 | Info -> MutexHandler :: GetMutex -> End
+24/06/2025 08:47:15.536 | Info -> MutexHandler :: AcquireMutex -> mutex 'HeavyCodeSection' ownership succeeded
+24/06/2025 08:47:15.536 | Info -> MutexHandler :: AcquireMutex -> End
+24/06/2025 08:47:15.536 | Searching for ExpectConfiguration.ini file in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:15.536 | ExpectConfiguration.ini file was NOT found in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:15.536 | Searching for ExpectConfiguration.ini file in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:15.536 | ExpectConfiguration.ini file was NOT found in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:15.552 | Create RebexAdapter in mode Default
+24/06/2025 08:47:16.984 | Getting stored fingerprint for 'ssh-rsa@22:10.135.5.1'.
+24/06/2025 08:47:17.000 | 'ssh-rsa@22:10.135.5.1' fingerprint is a match.
+24/06/2025 08:47:17.079 | Performing keyboard-interactive challenge-response authentication.
+24/06/2025 08:47:17.079 | Remote SSH server has presented the following challenge 'Password:'.
+24/06/2025 08:47:17.079 | Trying to match the following prompts:
+24/06/2025 08:47:17.079 | 1.Password: 'Password:'
+24/06/2025 08:47:17.079 | 'Password' is matched.
+24/06/2025 08:47:17.079 | Sending: *****
+24/06/2025 08:47:17.220 | Info -> MutexHandler :: ReleaseMutex -> Start
+24/06/2025 08:47:17.220 | Info -> MutexHandler :: ReleaseMutex -> Release mutex 'HeavyCodeSection'
+24/06/2025 08:47:17.220 | Info -> MutexHandler :: ReleaseMutex -> End
+24/06/2025 08:47:17.220 | Info -> z :: b -> Timeout value was set to 10 seconds
+24/06/2025 08:47:17.220 | Info -> z :: b -> Connected to 10.135.5.1
+24/06/2025 08:47:17.220 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:17.220 | Info -> bz :: ak -> 1.InvalidLogin: 'Login invalid|Authentication failed|Access denied'
+24/06/2025 08:47:17.220 | Info -> bz :: ak -> 2.StandardEnablePrompt: '.*\# ?$'
+24/06/2025 08:47:17.220 | Info -> bz :: ak -> 3.StandardPrompt: '.*\> ?$'
+24/06/2025 08:47:17.299 | Info -> bl :: b -> Received: NJ17LAB-02A04#
+24/06/2025 08:47:17.299 | Info -> bz :: b -> 'StandardEnablePrompt' is matched
+24/06/2025 08:47:17.299 | Info -> bz :: b -> Expect: set expect_out(0,string) "NJ17LAB-02A04#"
+24/06/2025 08:47:17.299 | Info -> e :: a -> END
+24/06/2025 08:47:17.299 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:17.299 | Info -> bh :: c -> 	GPHIncreaseTerminalWidth
+24/06/2025 08:47:17.299 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:17.299 | Info -> bl :: a -> Sending: terminal width 0\r
+24/06/2025 08:47:17.316 | Info -> bz :: c -> START
+24/06/2025 08:47:17.316 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:17.316 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHCheckPassword
+24/06/2025 08:47:17.316 | Info -> bz :: c -> END
+24/06/2025 08:47:17.316 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:17.316 | Info -> bh :: c -> 	GPHCheckPassword
+24/06/2025 08:47:17.316 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:17.316 | Info -> m :: l -> START
+24/06/2025 08:47:17.316 | Info -> m :: l -> Processing TCL Command (script)set bEnablePrompt 1;
+24/06/2025 08:47:17.316 | Info -> m :: l -> END
+24/06/2025 08:47:17.316 | Info -> bz :: c -> START
+24/06/2025 08:47:17.316 | Info -> bz :: b -> Analyzing next state candidate DoesPreviousPasswordHashNotSet: '(expression)$bPreviousPasswordHashSet == 0'
+24/06/2025 08:47:17.316 | Info -> bz :: b -> Expression 'DoesPreviousPasswordHashNotSet' is TRUE, continuing to next state GPHSetPreviousPasswordHash
+24/06/2025 08:47:17.316 | Info -> bz :: c -> END
+24/06/2025 08:47:17.316 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:17.316 | Info -> bh :: c -> 	GPHSetPreviousPasswordHash
+24/06/2025 08:47:17.316 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:17.316 | Info -> m :: l -> START
+24/06/2025 08:47:17.316 | Info -> m :: l -> Processing TCL Command (script)set bPreviousPasswordHashSet 1;
+24/06/2025 08:47:17.316 | Info -> m :: l -> END
+24/06/2025 08:47:17.316 | Info -> bz :: c -> START
+24/06/2025 08:47:17.316 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:17.316 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHShowPreviousUserExistence
+24/06/2025 08:47:17.316 | Info -> bz :: c -> END
+24/06/2025 08:47:17.316 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:17.316 | Info -> bh :: c -> 	GPHShowPreviousUserExistence
+24/06/2025 08:47:17.316 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:17.316 | Info -> bl :: a -> Sending: show running-config | include username spgi\r
+24/06/2025 08:47:17.331 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:17.331 | Info -> bz :: ak -> 1.DoesPasswordExist: 'username .* privilege'
+24/06/2025 08:47:19.632 | Info -> bl :: b -> Received: erminal width 0
+NJ17LAB-02A04#show running-config | include username spgi
+username spgi privilege 15 secret 5 $1$3TW.$Zuhy75oBW45oKqRMHz1a80
+NJ17LAB-02A04#
+24/06/2025 08:47:19.632 | Info -> bz :: b -> 'DoesPasswordExist' is matched
+24/06/2025 08:47:19.632 | Info -> bz :: b -> Expect: set expect_out(0,string) "username spgi
+username spgi privilege"
+24/06/2025 08:47:19.632 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.632 | Info -> bh :: c -> 	GPHSetHashPrev
+24/06/2025 08:47:19.632 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.632 | Info -> j :: l -> START
+24/06/2025 08:47:19.632 | Info -> j :: l -> Processing TCL Command (setLastPromptToParameter)set bPreviousPasswordHash with setting prompt to parameter
+24/06/2025 08:47:19.632 | Info -> j :: l -> END
+24/06/2025 08:47:19.632 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:19.632 | Info -> bz :: ak -> 1.DoesCommandWorks: '.*'
+24/06/2025 08:47:19.647 | Info -> bl :: b -> Received: erminal width 0
+NJ17LAB-02A04#show running-config | include username spgi
+username spgi privilege 15 secret 5 $1$3TW.$Zuhy75oBW45oKqRMHz1a80
+NJ17LAB-02A04#
+24/06/2025 08:47:19.647 | Info -> bz :: b -> 'DoesCommandWorks' is matched
+24/06/2025 08:47:19.647 | Info -> bz :: b -> Expect: set expect_out(0,string) "erminal width 0
+NJ17LAB-02A04#show running-config | include username spgi
+username spgi privilege 15 secret 5 $1$3TW.$Zuhy75oBW45oKqRMHz1a80
+NJ17LAB-02A04#"
+24/06/2025 08:47:19.647 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.647 | Info -> bh :: c -> 	GPHGoToReconcile
+24/06/2025 08:47:19.647 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.647 | Info -> bz :: c -> START
+24/06/2025 08:47:19.647 | Info -> bz :: b -> Analyzing next state candidate ActionIsReconcileOrPreReconcile: '(expression)[string equal -nocase "<action>" "reconcilepass"]||[string equal -nocase "<action>" "prereconcilepass"]'
+24/06/2025 08:47:19.647 | Info -> bz :: b -> Expression 'ActionIsReconcileOrPreReconcile' is TRUE, continuing to next state ReconcileUserMode
+24/06/2025 08:47:19.647 | Info -> bz :: c -> END
+24/06/2025 08:47:19.647 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.647 | Info -> bh :: c -> 	ReconcileUserMode
+24/06/2025 08:47:19.647 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.647 | Info -> bz :: c -> START
+24/06/2025 08:47:19.647 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:19.647 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckRecPrompt
+24/06/2025 08:47:19.647 | Info -> bz :: c -> END
+24/06/2025 08:47:19.647 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.647 | Info -> bh :: c -> 	CheckRecPrompt
+24/06/2025 08:47:19.647 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.647 | Info -> bz :: c -> START
+24/06/2025 08:47:19.647 | Info -> bz :: b -> Analyzing next state candidate IsEnablePromptFlagOn: '(expression)$bEnablePrompt == 1'
+24/06/2025 08:47:19.647 | Info -> bz :: b -> Expression 'IsEnablePromptFlagOn' is TRUE, continuing to next state CheckIfPreRecAction
+24/06/2025 08:47:19.647 | Info -> bz :: c -> END
+24/06/2025 08:47:19.647 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.647 | Info -> bh :: c -> 	CheckIfPreRecAction
+24/06/2025 08:47:19.647 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:19.647 | Info -> bz :: c -> START
+24/06/2025 08:47:19.647 | Info -> bz :: b -> Analyzing next state candidate ActionIsPreReconcile: '(expression)[string equal -nocase "<action>" "prereconcilepass"]'
+24/06/2025 08:47:19.647 | Info -> bz :: b -> Expression 'ActionIsPreReconcile' is TRUE, continuing to next state END
+24/06/2025 08:47:19.647 | Info -> bz :: c -> END
+24/06/2025 08:47:19.647 | Info -> bl :: a -> Finish plugin execution
+24/06/2025 08:47:19.647 | Info -> bl :: a -> Result: SUCCESS
+24/06/2025 08:47:19.647 | Info -> bl :: a ->  RC: 0
+24/06/2025 08:47:19.647 | Info -> bh :: b -> 	|---------------------------------------|
+24/06/2025 08:47:19.647 | Info -> bh :: b -> 		Plugin Execution END
+24/06/2025 08:47:19.647 | Info -> bh :: b -> 	|---------------------------------------|
+24/06/2025 08:47:19.647 | Info -> MutexHandler :: ReleaseMutex -> Start
+24/06/2025 08:47:19.647 | Info -> MutexHandler :: ReleaseMutex -> End
+24/06/2025 08:47:20.247 | 
+24/06/2025 08:47:20.247 | ================================================================================
+24/06/2025 08:47:20.247 | 6/24/2025 8:47:20 AM
+24/06/2025 08:47:20.247 | ================================================================================
+24/06/2025 08:47:20.247 | 
+24/06/2025 08:47:20.259 | Info -> bh :: b -> TPC Version: 14.4.0.5
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> START
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> END
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> START
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> END
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> START
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> END
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> START
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> END
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> START
+24/06/2025 08:47:20.404 | Info -> CasosDecryptor :: criptolibConstDecryptEX -> END
+24/06/2025 08:47:20.435 | Info -> MutexHandler :: AcquireMutex -> Start
+24/06/2025 08:47:20.435 | Info -> MutexHandler :: GetMutex -> Start
+24/06/2025 08:47:20.435 | Info -> MutexHandler :: GetExistingMutex -> Trying to open 'HeavyCodeSection' mutex
+24/06/2025 08:47:20.435 | Info -> MutexHandler :: GetMutex -> Trying to create 'HeavyCodeSection' mutex
+24/06/2025 08:47:20.435 | Info -> MutexHandler :: GetMutex -> mutex 'HeavyCodeSection' creation succeeded
+24/06/2025 08:47:20.435 | Info -> MutexHandler :: GetMutex -> End
+24/06/2025 08:47:20.435 | Info -> MutexHandler :: AcquireMutex -> mutex 'HeavyCodeSection' ownership succeeded
+24/06/2025 08:47:20.435 | Info -> MutexHandler :: AcquireMutex -> End
+24/06/2025 08:47:20.892 | Info -> MutexHandler :: ReleaseMutex -> Start
+24/06/2025 08:47:20.892 | Info -> MutexHandler :: ReleaseMutex -> Release mutex 'HeavyCodeSection'
+24/06/2025 08:47:20.892 | Info -> MutexHandler :: ReleaseMutex -> End
+24/06/2025 08:47:21.049 | Info -> bh :: b -> 	|---------------------------------------|
+24/06/2025 08:47:21.049 | Info -> bh :: b -> 		Plugin Execution START
+24/06/2025 08:47:21.049 | Info -> bh :: b -> 	|---------------------------------------|
+24/06/2025 08:47:21.049 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.049 | Info -> bh :: c -> 	InitAction
+24/06/2025 08:47:21.049 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.058 | Info -> m :: l -> START
+24/06/2025 08:47:21.058 | Info -> m :: l -> Processing TCL Command (script)set bTarget 0; set bVerifyRecPass 0; set bTacacsAuth 0; set bPreviousPasswordHashSet 0;
+24/06/2025 08:47:21.065 | Info -> m :: l -> END
+24/06/2025 08:47:21.065 | Info -> bz :: c -> START
+24/06/2025 08:47:21.065 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:21.065 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckUsernameForBlackList
+24/06/2025 08:47:21.065 | Info -> bz :: c -> END
+24/06/2025 08:47:21.065 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.065 | Info -> bh :: c -> 	CheckUsernameForBlackList
+24/06/2025 08:47:21.065 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.065 | Info -> m :: l -> START
+24/06/2025 08:47:21.065 | Info -> m :: l -> Processing TCL Command (script) set bContainsBlacklistCharsOrWords [expr {![string is alnum "<username>"]||[string match -nocase "password" "<username>"]}];
+24/06/2025 08:47:21.075 | Info -> m :: l -> END
+24/06/2025 08:47:21.075 | Info -> bz :: c -> START
+24/06/2025 08:47:21.075 | Info -> bz :: b -> Analyzing next state candidate ContainsForbiddenCharsOrWords: '(expression)$bContainsBlacklistCharsOrWords'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate NotContainsForbiddenCharsOrWords: '(expression)(!$bContainsBlacklistCharsOrWords)'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Expression 'NotContainsForbiddenCharsOrWords' is TRUE, continuing to next state CheckTacacsAuthParameter
+24/06/2025 08:47:21.081 | Info -> bz :: c -> END
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bh :: c -> 	CheckTacacsAuthParameter
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bz :: c -> START
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate DoesTacacsAuthParameterEnabled: '(expression)[string equal -nocase "<TacacsAuth>" "yes"]'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Expression 'DoesTacacsAuthParameterEnabled' is TRUE, continuing to next state SetTacacsAuthOn
+24/06/2025 08:47:21.081 | Info -> bz :: c -> END
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bh :: c -> 	SetTacacsAuthOn
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> m :: l -> START
+24/06/2025 08:47:21.081 | Info -> m :: l -> Processing TCL Command (script)set bTacacsAuth 1;
+24/06/2025 08:47:21.081 | Info -> m :: l -> END
+24/06/2025 08:47:21.081 | Info -> bz :: c -> START
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckAction
+24/06/2025 08:47:21.081 | Info -> bz :: c -> END
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bh :: c -> 	CheckAction
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bz :: c -> START
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate ActionIsVerify: '(expression)[string equal -nocase "<action>" "verifypass"]'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate ActionIsReconcileOrPreReconcile: '(expression)[string equal -nocase "<action>" "reconcilepass"]||[string equal -nocase "<action>" "prereconcilepass"]'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Expression 'ActionIsReconcileOrPreReconcile' is TRUE, continuing to next state Reconcile
+24/06/2025 08:47:21.081 | Info -> bz :: c -> END
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bh :: c -> 	Reconcile
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bz :: c -> START
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state SetRecPass
+24/06/2025 08:47:21.081 | Info -> bz :: c -> END
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bh :: c -> 	SetRecPass
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bz :: c -> START
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate RecExt3Exist: '(expression)![string equal -nocase "<pmextrapass3>" ""]'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Expression 'RecExt3Exist' is TRUE, continuing to next state SetRecPassExt3
+24/06/2025 08:47:21.081 | Info -> bz :: c -> END
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bh :: c -> 	SetRecPassExt3
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> m :: l -> START
+24/06/2025 08:47:21.081 | Info -> m :: l -> Processing TCL Command (script)set bTarget 0;set enable_pass "<pmextrapass1>";set login_pass "<pmextrapass3>"; set login_user "<extrapass3\username>"; set login_address "<extrapass3\address>"; set login_port "<extrapass3\port>";
+24/06/2025 08:47:21.081 | Info -> m :: l -> END
+24/06/2025 08:47:21.081 | Info -> bz :: c -> START
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckRecByEnableExt3
+24/06/2025 08:47:21.081 | Info -> bz :: c -> END
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bh :: c -> 	CheckRecByEnableExt3
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bz :: c -> START
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate IsEnableExt3: '(expression)[string equal -nocase "<extrapass3\Type>" "ciscoenable"]'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckTacacsAuthReconcile
+24/06/2025 08:47:21.081 | Info -> bz :: c -> END
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bh :: c -> 	CheckTacacsAuthReconcile
+24/06/2025 08:47:21.081 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.081 | Info -> bz :: c -> START
+24/06/2025 08:47:21.081 | Info -> bz :: b -> Analyzing next state candidate DoesTacacsAuthEnabled: '(expression)$bTacacsAuth == 1'
+24/06/2025 08:47:21.097 | Info -> bz :: b -> Expression 'DoesTacacsAuthEnabled' is TRUE, continuing to next state GPHGetUserPrompt
+24/06/2025 08:47:21.097 | Info -> bz :: c -> END
+24/06/2025 08:47:21.097 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.097 | Info -> bh :: c -> 	GPHGetUserPrompt
+24/06/2025 08:47:21.097 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.097 | Info -> bz :: c -> START
+24/06/2025 08:47:21.097 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:21.097 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHCheckProtocol
+24/06/2025 08:47:21.097 | Info -> bz :: c -> END
+24/06/2025 08:47:21.097 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.097 | Info -> bh :: c -> 	GPHCheckProtocol
+24/06/2025 08:47:21.097 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.097 | Info -> bz :: c -> START
+24/06/2025 08:47:21.097 | Info -> bz :: b -> Analyzing next state candidate ProtocolIsSSH: '(expression)[string equal -nocase "<Protocol>" "ssh"]'
+24/06/2025 08:47:21.097 | Info -> bz :: b -> Expression 'ProtocolIsSSH' is TRUE, continuing to next state GPHStartSessionSSH
+24/06/2025 08:47:21.097 | Info -> bz :: c -> END
+24/06/2025 08:47:21.097 | Info -> cw :: a -> Host name updated from spawn command: 10.135.5.1
+24/06/2025 08:47:21.097 | Info -> cw :: a -> Port updated from spawn command: 22
+24/06/2025 08:47:21.113 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:21.113 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:21.113 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:21.113 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:21.113 | Info -> c :: a -> State machine type was changed from: c to: bi
+24/06/2025 08:47:21.113 | Info -> cw :: a -> Host name updated from spawn command: 10.135.5.1
+24/06/2025 08:47:21.113 | Info -> cw :: a -> Port updated from spawn command: 22
+24/06/2025 08:47:21.113 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:21.113 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:21.113 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:21.113 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:21.113 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.113 | Info -> bh :: c -> 	GPHStartSessionSSH
+24/06/2025 08:47:21.113 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.113 | Info -> cw :: a -> Host name updated from spawn command: 10.135.5.1
+24/06/2025 08:47:21.113 | Info -> cw :: a -> Port updated from spawn command: 22
+24/06/2025 08:47:21.113 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.113 | Info -> bh :: c -> 	GPHStoreKeyInCache
+24/06/2025 08:47:21.113 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.113 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.113 | Info -> bh :: c -> 	GPHLoginUser
+24/06/2025 08:47:21.113 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.113 | Info -> e :: a -> START
+24/06/2025 08:47:21.113 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.113 | Info -> bh :: c -> 	GPHLoginPass
+24/06/2025 08:47:21.113 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:21.113 | Info -> z :: b -> Trying to connect to 10.135.5.1 using venkata
+24/06/2025 08:47:21.113 | Info -> MutexHandler :: AcquireMutex -> Start
+24/06/2025 08:47:21.113 | Info -> MutexHandler :: GetMutex -> Start
+24/06/2025 08:47:21.113 | Info -> MutexHandler :: GetExistingMutex -> Trying to open 'HeavyCodeSection' mutex
+24/06/2025 08:47:21.113 | Info -> MutexHandler :: GetMutex -> Trying to create 'HeavyCodeSection' mutex
+24/06/2025 08:47:21.113 | Info -> MutexHandler :: GetMutex -> mutex 'HeavyCodeSection' creation succeeded
+24/06/2025 08:47:21.113 | Info -> MutexHandler :: GetMutex -> End
+24/06/2025 08:47:21.113 | Info -> MutexHandler :: AcquireMutex -> mutex 'HeavyCodeSection' ownership succeeded
+24/06/2025 08:47:21.113 | Info -> MutexHandler :: AcquireMutex -> End
+24/06/2025 08:47:21.128 | Searching for ExpectConfiguration.ini file in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:21.128 | ExpectConfiguration.ini file was NOT found in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:21.128 | Searching for ExpectConfiguration.ini file in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:21.128 | ExpectConfiguration.ini file was NOT found in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:21.128 | Create RebexAdapter in mode Default
+24/06/2025 08:47:22.578 | Getting stored fingerprint for 'ssh-rsa@22:10.135.5.1'.
+24/06/2025 08:47:22.578 | 'ssh-rsa@22:10.135.5.1' fingerprint is a match.
+24/06/2025 08:47:22.625 | Performing keyboard-interactive challenge-response authentication.
+24/06/2025 08:47:22.641 | Remote SSH server has presented the following challenge 'Password:'.
+24/06/2025 08:47:22.641 | Trying to match the following prompts:
+24/06/2025 08:47:22.641 | 1.Password: 'Password:'
+24/06/2025 08:47:22.641 | 'Password' is matched.
+24/06/2025 08:47:22.641 | Sending: *****
+24/06/2025 08:47:22.783 | Info -> MutexHandler :: ReleaseMutex -> Start
+24/06/2025 08:47:22.783 | Info -> MutexHandler :: ReleaseMutex -> Release mutex 'HeavyCodeSection'
+24/06/2025 08:47:22.783 | Info -> MutexHandler :: ReleaseMutex -> End
+24/06/2025 08:47:22.783 | Info -> z :: b -> Timeout value was set to 10 seconds
+24/06/2025 08:47:22.783 | Info -> z :: b -> Connected to 10.135.5.1
+24/06/2025 08:47:22.783 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:22.783 | Info -> bz :: ak -> 1.InvalidLogin: 'Login invalid|Authentication failed|Access denied'
+24/06/2025 08:47:22.783 | Info -> bz :: ak -> 2.StandardEnablePrompt: '.*\# ?$'
+24/06/2025 08:47:22.783 | Info -> bz :: ak -> 3.StandardPrompt: '.*\> ?$'
+24/06/2025 08:47:22.861 | Info -> bl :: b -> Received: NJ17LAB-02A04#
+24/06/2025 08:47:22.861 | Info -> bz :: b -> 'StandardEnablePrompt' is matched
+24/06/2025 08:47:22.861 | Info -> bz :: b -> Expect: set expect_out(0,string) "NJ17LAB-02A04#"
+24/06/2025 08:47:22.861 | Info -> e :: a -> END
+24/06/2025 08:47:22.861 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:22.861 | Info -> bh :: c -> 	GPHIncreaseTerminalWidth
+24/06/2025 08:47:22.861 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:22.861 | Info -> bl :: a -> Sending: terminal width 0\r
+24/06/2025 08:47:22.878 | Info -> bz :: c -> START
+24/06/2025 08:47:22.878 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:22.878 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHCheckPassword
+24/06/2025 08:47:22.878 | Info -> bz :: c -> END
+24/06/2025 08:47:22.878 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:22.878 | Info -> bh :: c -> 	GPHCheckPassword
+24/06/2025 08:47:22.878 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:22.878 | Info -> m :: l -> START
+24/06/2025 08:47:22.878 | Info -> m :: l -> Processing TCL Command (script)set bEnablePrompt 1;
+24/06/2025 08:47:22.878 | Info -> m :: l -> END
+24/06/2025 08:47:22.878 | Info -> bz :: c -> START
+24/06/2025 08:47:22.878 | Info -> bz :: b -> Analyzing next state candidate DoesPreviousPasswordHashNotSet: '(expression)$bPreviousPasswordHashSet == 0'
+24/06/2025 08:47:22.878 | Info -> bz :: b -> Expression 'DoesPreviousPasswordHashNotSet' is TRUE, continuing to next state GPHSetPreviousPasswordHash
+24/06/2025 08:47:22.878 | Info -> bz :: c -> END
+24/06/2025 08:47:22.878 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:22.878 | Info -> bh :: c -> 	GPHSetPreviousPasswordHash
+24/06/2025 08:47:22.878 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:22.878 | Info -> m :: l -> START
+24/06/2025 08:47:22.878 | Info -> m :: l -> Processing TCL Command (script)set bPreviousPasswordHashSet 1;
+24/06/2025 08:47:22.878 | Info -> m :: l -> END
+24/06/2025 08:47:22.878 | Info -> bz :: c -> START
+24/06/2025 08:47:22.878 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:22.878 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHShowPreviousUserExistence
+24/06/2025 08:47:22.878 | Info -> bz :: c -> END
+24/06/2025 08:47:22.878 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:22.878 | Info -> bh :: c -> 	GPHShowPreviousUserExistence
+24/06/2025 08:47:22.878 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:22.878 | Info -> bl :: a -> Sending: show running-config | include username spgi\r
+24/06/2025 08:47:22.893 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:22.893 | Info -> bz :: ak -> 1.DoesPasswordExist: 'username .* privilege'
+24/06/2025 08:47:25.256 | Info -> bl :: b -> Received: terminal width 0
+NJ17LAB-02A04#show running-config | include username spgiusername spgi privilege 15 secret 5 $1$3TW.$Zuhy75oBW45oKqRMHz1a80
+NJ17LAB-02A04#
+24/06/2025 08:47:25.256 | Info -> bz :: b -> 'DoesPasswordExist' is matched
+24/06/2025 08:47:25.256 | Info -> bz :: b -> Expect: set expect_out(0,string) "username spgiusername spgi privilege"
+24/06/2025 08:47:25.256 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.256 | Info -> bh :: c -> 	GPHSetHashPrev
+24/06/2025 08:47:25.256 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.256 | Info -> j :: l -> START
+24/06/2025 08:47:25.256 | Info -> j :: l -> Processing TCL Command (setLastPromptToParameter)set bPreviousPasswordHash with setting prompt to parameter
+24/06/2025 08:47:25.259 | Info -> j :: l -> END
+24/06/2025 08:47:25.259 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:25.259 | Info -> bz :: ak -> 1.DoesCommandWorks: '.*'
+24/06/2025 08:47:25.272 | Info -> bl :: b -> Received: terminal width 0
+NJ17LAB-02A04#show running-config | include username spgiusername spgi privilege 15 secret 5 $1$3TW.$Zuhy75oBW45oKqRMHz1a80
+NJ17LAB-02A04#
+24/06/2025 08:47:25.272 | Info -> bz :: b -> 'DoesCommandWorks' is matched
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Expect: set expect_out(0,string) "terminal width 0
+NJ17LAB-02A04#show running-config | include username spgiusername spgi privilege 15 secret 5 $1$3TW.$Zuhy75oBW45oKqRMHz1a80
+NJ17LAB-02A04#"
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bh :: c -> 	GPHGoToReconcile
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bz :: c -> START
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Analyzing next state candidate ActionIsReconcileOrPreReconcile: '(expression)[string equal -nocase "<action>" "reconcilepass"]||[string equal -nocase "<action>" "prereconcilepass"]'
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Expression 'ActionIsReconcileOrPreReconcile' is TRUE, continuing to next state ReconcileUserMode
+24/06/2025 08:47:25.272 | Info -> bz :: c -> END
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bh :: c -> 	ReconcileUserMode
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bz :: c -> START
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state CheckRecPrompt
+24/06/2025 08:47:25.272 | Info -> bz :: c -> END
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bh :: c -> 	CheckRecPrompt
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bz :: c -> START
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Analyzing next state candidate IsEnablePromptFlagOn: '(expression)$bEnablePrompt == 1'
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Expression 'IsEnablePromptFlagOn' is TRUE, continuing to next state CheckIfPreRecAction
+24/06/2025 08:47:25.272 | Info -> bz :: c -> END
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bh :: c -> 	CheckIfPreRecAction
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bz :: c -> START
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Analyzing next state candidate ActionIsPreReconcile: '(expression)[string equal -nocase "<action>" "prereconcilepass"]'
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Analyzing next state candidate ActionIsReconcile: '(expression)[string equal -nocase "<action>" "reconcilepass"]'
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Expression 'ActionIsReconcile' is TRUE, continuing to next state SetAccountToBeReconciled
+24/06/2025 08:47:25.272 | Info -> bz :: c -> END
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bh :: c -> 	SetAccountToBeReconciled
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> m :: l -> START
+24/06/2025 08:47:25.272 | Info -> m :: l -> Processing TCL Command (script)set login_pass "<pmpass>"; set login_user "<username>"; set login_address "<address>"; set login_port "<port>";
+24/06/2025 08:47:25.272 | Info -> m :: l -> END
+24/06/2025 08:47:25.272 | Info -> bz :: c -> START
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state DirectToChangePass
+24/06/2025 08:47:25.272 | Info -> bz :: c -> END
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bh :: c -> 	DirectToChangePass
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bz :: c -> START
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:25.272 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state ConfigureTerminal
+24/06/2025 08:47:25.272 | Info -> bz :: c -> END
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bh :: c -> 	ConfigureTerminal
+24/06/2025 08:47:25.272 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.272 | Info -> bl :: a -> Sending: configure terminal\r
+24/06/2025 08:47:25.282 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:25.282 | Info -> bz :: ak -> 1.StandardConfigPrompt: '.*\(config\).*\# ?$'
+24/06/2025 08:47:25.603 | Info -> bl :: b -> Received: Enter configuration commands, one per line.  End with CNTL/Z.
+NJ17LAB-02A04(config)#
+24/06/2025 08:47:25.603 | Info -> bz :: b -> 'StandardConfigPrompt' is matched
+24/06/2025 08:47:25.603 | Info -> bz :: b -> Expect: set expect_out(0,string) "Enter configuration commands, one per line.  End with CNTL/Z.
+NJ17LAB-02A04(config)#"
+24/06/2025 08:47:25.603 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.603 | Info -> bh :: c -> 	CheckUserType
+24/06/2025 08:47:25.603 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.603 | Info -> bz :: c -> START
+24/06/2025 08:47:25.603 | Info -> bz :: b -> Analyzing next state candidate CiscoUser: '(expression)[string equal -nocase "<Type>" "ciscouser"]'
+24/06/2025 08:47:25.603 | Info -> bz :: b -> Expression 'CiscoUser' is TRUE, continuing to next state ChangeUserPass
+24/06/2025 08:47:25.603 | Info -> bz :: c -> END
+24/06/2025 08:47:25.603 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.603 | Info -> bh :: c -> 	ChangeUserPass
+24/06/2025 08:47:25.603 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.603 | Info -> bl :: a -> Sending: username spgi secret *****\r
+24/06/2025 08:47:25.618 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:25.618 | Info -> bz :: ak -> 1.BadNewPassword: 'Password too short|.*\(cleartext\) user password|.*Set exec level password'
+24/06/2025 08:47:25.618 | Info -> bz :: ak -> 2.StandardConfigPrompt: '.*\(config\).*\# ?$'
+24/06/2025 08:47:25.697 | Info -> bl :: b -> Received: 
+NJ17LAB-02A04(config)#
+24/06/2025 08:47:25.697 | Info -> bz :: b -> 'StandardConfigPrompt' is matched
+24/06/2025 08:47:25.697 | Info -> bz :: b -> Expect: set expect_out(0,string) "
+NJ17LAB-02A04(config)#"
+24/06/2025 08:47:25.697 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.697 | Info -> bh :: c -> 	CheckIfCommitSpecified
+24/06/2025 08:47:25.697 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.697 | Info -> bz :: c -> START
+24/06/2025 08:47:25.697 | Info -> bz :: b -> Analyzing next state candidate IsCommitNotSpecified: '(expression)![string equal -nocase "<commit>" "yes"]'
+24/06/2025 08:47:25.697 | Info -> bz :: b -> Analyzing next state candidate IsCommitSpecified: '(expression)[string equal -nocase "<commit>" "yes"]'
+24/06/2025 08:47:25.697 | Info -> bz :: b -> Expression 'IsCommitSpecified' is TRUE, continuing to next state ExitConfigMode
+24/06/2025 08:47:25.697 | Info -> bz :: c -> END
+24/06/2025 08:47:25.697 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.697 | Info -> bh :: c -> 	ExitConfigMode
+24/06/2025 08:47:25.697 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:25.697 | Info -> bl :: a -> Sending: exit\r
+24/06/2025 08:47:25.713 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:25.713 | Info -> bz :: ak -> 1.StandardConfigPrompt: '.*\(config\).*\# ?$'
+24/06/2025 08:47:25.713 | Info -> bz :: ak -> 2.StandardEnablePrompt: '.*\# ?$'
+24/06/2025 08:47:25.713 | Info -> bz :: ak -> 3.StandardPrompt: '.*\> ?$'
+24/06/2025 08:47:26.043 | Info -> bl :: b -> Received: 
+NJ17LAB-02A04#
+24/06/2025 08:47:26.043 | Info -> bz :: b -> 'StandardEnablePrompt' is matched
+24/06/2025 08:47:26.043 | Info -> bz :: b -> Expect: set expect_out(0,string) "
+NJ17LAB-02A04#"
+24/06/2025 08:47:26.043 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:26.043 | Info -> bh :: c -> 	StartCommit
+24/06/2025 08:47:26.043 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:26.043 | Info -> MutexHandler :: AcquireMutex -> Start
+24/06/2025 08:47:26.043 | Info -> MutexHandler :: GetMutex -> Start
+24/06/2025 08:47:26.043 | Info -> MutexHandler :: GetExistingMutex -> Trying to open 'tmp/tpcengine-cisco-10.135.5.1' mutex
+24/06/2025 08:47:26.043 | Info -> MutexHandler :: GetMutex -> Trying to create 'tmp/tpcengine-cisco-10.135.5.1' mutex
+24/06/2025 08:47:26.043 | Info -> MutexHandler :: GetMutex -> mutex 'tmp/tpcengine-cisco-10.135.5.1' creation succeeded
+24/06/2025 08:47:26.043 | Info -> MutexHandler :: GetMutex -> End
+24/06/2025 08:47:26.043 | Info -> MutexHandler :: AcquireMutex -> mutex 'tmp/tpcengine-cisco-10.135.5.1' ownership succeeded
+24/06/2025 08:47:26.043 | Info -> MutexHandler :: AcquireMutex -> End
+24/06/2025 08:47:26.043 | Info -> bz :: c -> START
+24/06/2025 08:47:26.043 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:26.043 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state commit
+24/06/2025 08:47:26.043 | Info -> bz :: c -> END
+24/06/2025 08:47:26.043 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:26.043 | Info -> bh :: c -> 	commit
+24/06/2025 08:47:26.043 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:26.043 | Info -> bl :: a -> Sending: copy running-config startup-config\r
+24/06/2025 08:47:26.058 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:26.058 | Info -> bz :: ak -> 1.DestFile: 'Destination filename \[startup-config\]\?'
+24/06/2025 08:47:28.044 | Info -> bl :: b -> Received: 
+Destination filename [startup-config]? 
+24/06/2025 08:47:28.044 | Info -> bz :: b -> 'DestFile' is matched
+24/06/2025 08:47:28.044 | Info -> bz :: b -> Expect: set expect_out(0,string) "Destination filename [startup-config]?"
+24/06/2025 08:47:28.044 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:28.044 | Info -> bh :: c -> 	CheckCommit
+24/06/2025 08:47:28.044 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:28.044 | Info -> bl :: a -> Sending: startup-config\r
+24/06/2025 08:47:28.060 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:28.060 | Info -> bz :: ak -> 1.CommitOK: '\[OK\]'
+24/06/2025 08:47:30.358 | Info -> bl :: b -> Received: 
+Building configuration...
+[OK]
+0 bytes copied in 2.257 secs (0 bytes/sec)
+NJ17LAB-02A04#
+24/06/2025 08:47:30.358 | Info -> bz :: b -> 'CommitOK' is matched
+24/06/2025 08:47:30.358 | Info -> bz :: b -> Expect: set expect_out(0,string) "[OK]"
+24/06/2025 08:47:30.358 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.358 | Info -> bh :: c -> 	EndCommit
+24/06/2025 08:47:30.358 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.359 | Info -> MutexHandler :: ReleaseMutex -> Start
+24/06/2025 08:47:30.359 | Info -> MutexHandler :: ReleaseMutex -> Release mutex 'tmp/tpcengine-cisco-10.135.5.1'
+24/06/2025 08:47:30.359 | Info -> MutexHandler :: ReleaseMutex -> End
+24/06/2025 08:47:30.359 | Info -> bz :: c -> START
+24/06/2025 08:47:30.359 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:30.359 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state logout
+24/06/2025 08:47:30.359 | Info -> bz :: c -> END
+24/06/2025 08:47:30.359 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.359 | Info -> bh :: c -> 	logout
+24/06/2025 08:47:30.359 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> m :: l -> START
+24/06/2025 08:47:30.360 | Info -> m :: l -> Processing TCL Command (script)close
+24/06/2025 08:47:30.360 | Info -> cl :: Execute -> Closing session
+24/06/2025 08:47:30.360 | Info -> m :: l -> END
+24/06/2025 08:47:30.360 | Info -> bz :: c -> START
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state HowToVerifyLogon
+24/06/2025 08:47:30.360 | Info -> bz :: c -> END
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	HowToVerifyLogon
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bz :: c -> START
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Analyzing next state candidate ActionIsReconcile: '(expression)[string equal -nocase "<action>" "reconcilepass"]'
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Expression 'ActionIsReconcile' is TRUE, continuing to next state CheckTacacsAuthVerifyAfterReconcile
+24/06/2025 08:47:30.360 | Info -> bz :: c -> END
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	CheckTacacsAuthVerifyAfterReconcile
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bz :: c -> START
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Analyzing next state candidate DoesTacacsAuthEnabled: '(expression)$bTacacsAuth == 1'
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Expression 'DoesTacacsAuthEnabled' is TRUE, continuing to next state GPHVerifyAfterRec
+24/06/2025 08:47:30.360 | Info -> bz :: c -> END
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	GPHVerifyAfterRec
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bz :: c -> START
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Analyzing next state candidate CiscoUser: '(expression)[string equal -nocase "<Type>" "ciscouser"]'
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Expression 'CiscoUser' is TRUE, continuing to next state GPHInitVerifyAfterRecCiscoUser
+24/06/2025 08:47:30.360 | Info -> bz :: c -> END
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	GPHInitVerifyAfterRecCiscoUser
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Warning -> cx :: a -> Secret 'pmextrapass3\pmextrapass1' does not exist.
+24/06/2025 08:47:30.360 | Info -> m :: l -> START
+24/06/2025 08:47:30.360 | Info -> m :: l -> Processing TCL Command (script)set bVerifyRecPass 1;set bTarget 0;set enable_pass "<pmextrapass3\pmextrapass1>";set login_pass "<pmextrapass3>"; set login_user "<extrapass3\username>"; set login_address "<extrapass3\address>"; set login_port "<extrapass3\port>";
+24/06/2025 08:47:30.360 | Info -> m :: l -> END
+24/06/2025 08:47:30.360 | Info -> bz :: c -> START
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHGetUserPrompt
+24/06/2025 08:47:30.360 | Info -> bz :: c -> END
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	GPHGetUserPrompt
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bz :: c -> START
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHCheckProtocol
+24/06/2025 08:47:30.360 | Info -> bz :: c -> END
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	GPHCheckProtocol
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bz :: c -> START
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Analyzing next state candidate ProtocolIsSSH: '(expression)[string equal -nocase "<Protocol>" "ssh"]'
+24/06/2025 08:47:30.360 | Info -> bz :: b -> Expression 'ProtocolIsSSH' is TRUE, continuing to next state GPHStartSessionSSH
+24/06/2025 08:47:30.360 | Info -> bz :: c -> END
+24/06/2025 08:47:30.360 | Info -> cw :: a -> Host name updated from spawn command: 10.135.5.1
+24/06/2025 08:47:30.360 | Info -> cw :: a -> Port updated from spawn command: 22
+24/06/2025 08:47:30.360 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:30.360 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:30.360 | Info -> b5 :: a -> Trying to match the following RegEx: ^.*?\.exe with this command : bin\plink.exe 10.135.5.1 -ssh -P 22
+24/06/2025 08:47:30.360 | Info -> b5 :: a -> Trying to get file name from the command bin\plink.exe
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	GPHStartSessionSSH
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> cw :: a -> Host name updated from spawn command: 10.135.5.1
+24/06/2025 08:47:30.360 | Info -> cw :: a -> Port updated from spawn command: 22
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	GPHStoreKeyInCache
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	GPHLoginUser
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> e :: a -> START
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> bh :: c -> 	GPHLoginPass
+24/06/2025 08:47:30.360 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:30.360 | Info -> z :: b -> Trying to connect to 10.135.5.1 using venkata
+24/06/2025 08:47:30.360 | Info -> MutexHandler :: AcquireMutex -> Start
+24/06/2025 08:47:30.360 | Info -> MutexHandler :: GetMutex -> Start
+24/06/2025 08:47:30.360 | Info -> MutexHandler :: GetExistingMutex -> Trying to open 'HeavyCodeSection' mutex
+24/06/2025 08:47:30.360 | Info -> MutexHandler :: GetMutex -> Trying to create 'HeavyCodeSection' mutex
+24/06/2025 08:47:30.360 | Info -> MutexHandler :: GetMutex -> mutex 'HeavyCodeSection' creation succeeded
+24/06/2025 08:47:30.360 | Info -> MutexHandler :: GetMutex -> End
+24/06/2025 08:47:30.360 | Info -> MutexHandler :: AcquireMutex -> mutex 'HeavyCodeSection' ownership succeeded
+24/06/2025 08:47:30.360 | Info -> MutexHandler :: AcquireMutex -> End
+24/06/2025 08:47:30.360 | Searching for ExpectConfiguration.ini file in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:30.374 | ExpectConfiguration.ini file was NOT found in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:30.374 | Searching for ExpectConfiguration.ini file in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:30.374 | ExpectConfiguration.ini file was NOT found in: C:\Program Files (x86)\CyberArk\Password Manager\bin
+24/06/2025 08:47:30.374 | Create RebexAdapter in mode Default
+24/06/2025 08:47:31.695 | Getting stored fingerprint for 'ssh-rsa@22:10.135.5.1'.
+24/06/2025 08:47:31.695 | 'ssh-rsa@22:10.135.5.1' fingerprint is a match.
+24/06/2025 08:47:31.759 | Performing keyboard-interactive challenge-response authentication.
+24/06/2025 08:47:31.759 | Remote SSH server has presented the following challenge 'Password:'.
+24/06/2025 08:47:31.759 | Trying to match the following prompts:
+24/06/2025 08:47:31.759 | 1.Password: 'Password:'
+24/06/2025 08:47:31.759 | 'Password' is matched.
+24/06/2025 08:47:31.759 | Sending: *****
+24/06/2025 08:47:31.899 | Info -> MutexHandler :: ReleaseMutex -> Start
+24/06/2025 08:47:31.899 | Info -> MutexHandler :: ReleaseMutex -> Release mutex 'HeavyCodeSection'
+24/06/2025 08:47:31.899 | Info -> MutexHandler :: ReleaseMutex -> End
+24/06/2025 08:47:31.899 | Info -> z :: b -> Timeout value was set to 10 seconds
+24/06/2025 08:47:31.899 | Info -> z :: b -> Connected to 10.135.5.1
+24/06/2025 08:47:31.899 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:31.899 | Info -> bz :: ak -> 1.InvalidLogin: 'Login invalid|Authentication failed|Access denied'
+24/06/2025 08:47:31.899 | Info -> bz :: ak -> 2.StandardEnablePrompt: '.*\# ?$'
+24/06/2025 08:47:31.899 | Info -> bz :: ak -> 3.StandardPrompt: '.*\> ?$'
+24/06/2025 08:47:31.962 | Info -> bl :: b -> Received: NJ17LAB-02A04#
+24/06/2025 08:47:31.962 | Info -> bz :: b -> 'StandardEnablePrompt' is matched
+24/06/2025 08:47:31.962 | Info -> bz :: b -> Expect: set expect_out(0,string) "NJ17LAB-02A04#"
+24/06/2025 08:47:31.962 | Info -> e :: a -> END
+24/06/2025 08:47:31.962 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:31.962 | Info -> bh :: c -> 	GPHIncreaseTerminalWidth
+24/06/2025 08:47:31.962 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:31.962 | Info -> bl :: a -> Sending: terminal width 0\r
+24/06/2025 08:47:31.978 | Info -> bz :: c -> START
+24/06/2025 08:47:31.978 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:31.978 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHCheckPassword
+24/06/2025 08:47:31.978 | Info -> bz :: c -> END
+24/06/2025 08:47:31.978 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:31.978 | Info -> bh :: c -> 	GPHCheckPassword
+24/06/2025 08:47:31.978 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:31.978 | Info -> m :: l -> START
+24/06/2025 08:47:31.978 | Info -> m :: l -> Processing TCL Command (script)set bEnablePrompt 1;
+24/06/2025 08:47:31.978 | Info -> m :: l -> END
+24/06/2025 08:47:31.978 | Info -> bz :: c -> START
+24/06/2025 08:47:31.978 | Info -> bz :: b -> Analyzing next state candidate DoesPreviousPasswordHashNotSet: '(expression)$bPreviousPasswordHashSet == 0'
+24/06/2025 08:47:31.978 | Info -> bz :: b -> Analyzing next state candidate DoesPreviousPasswordHashSet: '(expression)$bPreviousPasswordHashSet == 1'
+24/06/2025 08:47:31.978 | Info -> bz :: b -> Expression 'DoesPreviousPasswordHashSet' is TRUE, continuing to next state GPHSetNewPasswordHash
+24/06/2025 08:47:31.978 | Info -> bz :: c -> END
+24/06/2025 08:47:31.978 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:31.978 | Info -> bh :: c -> 	GPHSetNewPasswordHash
+24/06/2025 08:47:31.978 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:31.978 | Info -> bz :: c -> START
+24/06/2025 08:47:31.978 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:31.978 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state GPHShowNewUserExistence
+24/06/2025 08:47:31.978 | Info -> bz :: c -> END
+24/06/2025 08:47:31.978 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:31.978 | Info -> bh :: c -> 	GPHShowNewUserExistence
+24/06/2025 08:47:31.978 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:31.978 | Info -> bl :: a -> Sending: show running-config | include username spgi\r
+24/06/2025 08:47:31.993 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:31.993 | Info -> bz :: ak -> 1.DoesPasswordExist: 'username .* privilege'
+24/06/2025 08:47:34.367 | Info -> bl :: b -> Received: nal width 0
+NJ17LAB-02A04#show running-config | include username spgi
+username spgi privilege 15 secret 5 $1$26nq$xN8f4GQ200yzwBMMnCPa41
+NJ17LAB-02A04#
+24/06/2025 08:47:34.367 | Info -> bz :: b -> 'DoesPasswordExist' is matched
+24/06/2025 08:47:34.367 | Info -> bz :: b -> Expect: set expect_out(0,string) "username spgi
+username spgi privilege"
+24/06/2025 08:47:34.367 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:34.367 | Info -> bh :: c -> 	GPHSetHashNev
+24/06/2025 08:47:34.367 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:34.367 | Info -> j :: l -> START
+24/06/2025 08:47:34.367 | Info -> j :: l -> Processing TCL Command (setLastPromptToParameter)set bNewPasswordHash with setting prompt to parameter
+24/06/2025 08:47:34.367 | Info -> j :: l -> END
+24/06/2025 08:47:34.367 | Info -> bz :: ak -> Trying to match the following prompts:
+24/06/2025 08:47:34.367 | Info -> bz :: ak -> 1.DoesCommandWorks: '.*'
+24/06/2025 08:47:34.383 | Info -> bl :: b -> Received: nal width 0
+NJ17LAB-02A04#show running-config | include username spgi
+username spgi privilege 15 secret 5 $1$26nq$xN8f4GQ200yzwBMMnCPa41
+NJ17LAB-02A04#
+24/06/2025 08:47:34.383 | Info -> bz :: b -> 'DoesCommandWorks' is matched
+24/06/2025 08:47:34.383 | Info -> bz :: b -> Expect: set expect_out(0,string) "nal width 0
+NJ17LAB-02A04#show running-config | include username spgi
+username spgi privilege 15 secret 5 $1$26nq$xN8f4GQ200yzwBMMnCPa41
+NJ17LAB-02A04#"
+24/06/2025 08:47:34.383 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:34.383 | Info -> bh :: c -> 	GPHlogout
+24/06/2025 08:47:34.383 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:34.383 | Info -> m :: l -> START
+24/06/2025 08:47:34.383 | Info -> m :: l -> Processing TCL Command (script)close
+24/06/2025 08:47:34.383 | Info -> cl :: Execute -> Closing session
+24/06/2025 08:47:34.383 | Info -> m :: l -> END
+24/06/2025 08:47:34.383 | Info -> bz :: c -> START
+24/06/2025 08:47:34.383 | Info -> bz :: b -> Analyzing next state candidate TRUE: '(expression)true'
+24/06/2025 08:47:34.383 | Info -> bz :: b -> Expression 'TRUE' is TRUE, continuing to next state VerifyAfterRecPassHash
+24/06/2025 08:47:34.383 | Info -> bz :: c -> END
+24/06/2025 08:47:34.383 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:34.383 | Info -> bh :: c -> 	VerifyAfterRecPassHash
+24/06/2025 08:47:34.383 | Info -> bh :: c -> *****************************************************************
+24/06/2025 08:47:34.383 | Info -> bz :: c -> START
+24/06/2025 08:47:34.383 | Info -> bz :: b -> Analyzing next state candidate GPHIsChangedPasswordHash: '(expression)![string equal -nocase "$bPreviousPasswordHash" "$bNewPasswordHash"]'
+24/06/2025 08:47:34.383 | Info -> bz :: b -> Expression 'GPHIsChangedPasswordHash' is TRUE, continuing to next state END
+24/06/2025 08:47:34.383 | Info -> bz :: c -> END
+24/06/2025 08:47:34.383 | Info -> bl :: a -> Finish plugin execution
+24/06/2025 08:47:34.383 | Info -> bl :: a -> Result: SUCCESS
+24/06/2025 08:47:34.383 | Info -> bl :: a ->  RC: 0
+24/06/2025 08:47:34.383 | Info -> bh :: b -> 	|---------------------------------------|
+24/06/2025 08:47:34.383 | Info -> bh :: b -> 		Plugin Execution END
+24/06/2025 08:47:34.383 | Info -> bh :: b -> 	|---------------------------------------|
+24/06/2025 08:47:34.383 | Info -> MutexHandler :: ReleaseMutex -> Start
+24/06/2025 08:47:34.383 | Info -> MutexHandler :: ReleaseMutex -> End
